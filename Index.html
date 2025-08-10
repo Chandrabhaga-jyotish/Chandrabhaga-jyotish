@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chandrabhag Jyotish</title>
+  <meta name="description" content="Chandrabhag Jyotish - Kundali, Yagna, Bhagvat Saptah, Satyanarayan Katha. 30+ years experience." />
+  <style>
+    :root{
+      --accent:#8fcf8f; /* light green */
+      --accent-dark:#5fb05f;
+      --white:#ffffff;
+      --muted: #2f6b2f;
+      --gold: #cfa04b;
+      font-size:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255,200,100,0.06) 0 8%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(255,150,80,0.05) 0 6%, transparent 26%),
+        linear-gradient(180deg, #f7fff7 0%, #eef9ee 100%);
+      color: #133913;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* header */
+    header{
+      padding:28px 18px;
+      text-align:center;
+      background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter: blur(4px);
+    }
+    .brand{
+      display:inline-flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background: linear-gradient(135deg,var(--accent),var(--accent-dark));
+      display:flex;align-items:center;justify-content:center;
+      box-shadow: 0 6px 18px rgba(95,176,95,0.12);
+    }
+    .logo svg{width:34px;height:34px;fill:white}
+    h1{margin:0;font-size:1.25rem;letter-spacing:0.6px}
+    p.tag{margin:6px 0 0;font-size:0.95rem;color:rgba(0,0,0,0.6)}
+
+    /* hero */
+    .hero{
+      padding:28px 16px;
+      text-align:center;
+      position:relative;
+    }
+    .hero .panel{
+      max-width:1000px;margin:0 auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.93));
+      border-radius:14px;
+      padding:20px;
+      box-shadow: 0 10px 30px rgba(17,72,17,0.06);
+      border:1px solid rgba(95,176,95,0.08);
+    }
+    .hero h2{margin:6px 0;font-size:1.35rem;color:var(--muted); text-shadow: 0 0 6px rgba(255,230,180,0.12)}
+    .hero p.lead{margin:8px 0 0;color:#2f6b2f;font-size:1rem;line-height:1.45}
+
+    /* services */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .card{
+      background:var(--white);
+      padding:12px;border-radius:10px;
+      border:1px solid rgba(0,0,0,0.04);
+      text-align:left;
+    }
+    .card h3{margin:0 0 6px;font-size:1.03rem;color:var(--muted)}
+    .card p{margin:0;color:#2d5e2d;font-size:0.92rem}
+
+    /* slideshow / gallery */
+    .slideshow{
+      margin:18px auto 6px;
+      max-width:1000px;border-radius:12px; overflow:hidden;
+      background: linear-gradient(180deg, rgba(143,207,143,0.06), rgba(95,176,95,0.03));
+      border:1px solid rgba(95,176,95,0.08);
+    }
+    .slideshow img{display:block;width:100%;height:340px;object-fit:cover}
+    @media(max-width:600px){ .slideshow img{height:220px} }
+
+    /* contact */
+    .contact{
+      max-width:1000px;margin:18px auto;padding:14px;border-radius:10px;background:var(--white);border:1px solid rgba(0,0,0,0.04);
+    }
+    .phones{display:flex;gap:10px;flex-wrap:wrap}
+    .phone-btn{
+      background: linear-gradient(90deg,var(--accent),var(--accent-dark));
+      color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;
+      display:inline-flex;align-items:center;gap:10px;box-shadow:0 8px 20px rgba(95,176,95,0.12)
+    }
+    .whatsapp{background:#25D366;color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center}
+
+    /* gallery area for later uploads (placeholders) */
+    .gallery{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;
+    }
+    .gallery img{width:calc(33.33% - 8px);border-radius:8px;height:100px;object-fit:cover;border:1px solid rgba(0,0,0,0.04)}
+    @media(max-width:600px){ .gallery img{width:calc(50% - 8px);} }
+
+    /* disclaimer */
+    .disclaimer{
+      max-width:1000px;margin:20px auto 60px;padding:12px;border-radius:8px;background:#fff9e8;border:1px solid rgba(200,160,80,0.08);
+      color:#4b3b10;font-size:0.95rem;
+    }
+
+    footer{
+      text-align:center;padding:18px 12px;background:transparent;color:rgba(0,0,0,0.6);font-size:0.92rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo" aria-hidden="true">
+      <!-- simple Amba icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2c1.1 0 2 .9 2 2v1h1.5C17.33 5 18 5.67 18 6.5V9h1v3h-1v2h1v3h-1v1.5c0 .83-.67 1.5-1.5 1.5H11v-2H9v2H6.5C5.67 21 5 20.33 5 19.5V19h1v-3H5v-2h1v-3H5V6.5C5 5.67 5.67 5 6.5 5H8V4c0-1.1.9-2 2-2h2z" />
+      </svg>
+    </div>
+    <div>
+      <h1>Chandrabhag Jyotish</h1>
+      <p class="tag">कुंडली • यज्ञ • भगवत सप्ताह • सत्यनारायण कथा</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="panel">
+      <h2>🌸 चन्द्रभागा ज्योतिष एवं कर्मकांड में आपका हार्दिक स्वागत है</h2>
+      <p class="lead">
+        ✨ यहाँ आप पा सकते हैं — कुंडली विश्लेषण, कुंडली मिलान, किसी भी प्रकार का यज्ञ, श्रीमद् भागवत सप्ताह, सत्यनारायण कथा,
+        ग्रहो का जाप व जाप फल का देशभर में पार्सल, एवं शिवाजी का अभिषेक।<br>
+        🪔 <strong>30+ वर्षों</strong> का अनुभव — श्रद्धा व शास्त्रानुसार सेवाएँ प्रदान की जाती हैं।
+      </p>
+
+      <div style="margin-top:14px" class="grid">
+        <div class="card">
+          <h3>कुंडली विश्लेषण (Kundali Analysis)</h3>
+          <p>जन्म पत्रिका का गहन अध्ययन कर के निवारण और उपयुक्त मार्गदर्शन।</p>
+        </div>
+        <div class="card">
+          <h3>यज्ञ व पूजा (Yagna & Rituals)</h3>
+          <p>सभी प्रकार के पारंपरिक यज्ञ एवं अनुष्ठान, शास्त्रानुसार विधि से।</p>
+        </div>
+        <div class="card">
+          <h3>भागवत सप्ताह (Bhagwat Saptah)</h3>
+          <p>श्रीमद्भागवत का सप्ताह आयोजन — घर/मन्दिर में वैदिक पद्धति से।</p>
+        </div>
+        <div class="card">
+          <h3>सत्यनारायण कथा (Satyanarayan Katha)</h3>
+          <p>सत्यनारायण भगवान की कथा व आयोजन — मंगल कामना हेतु।</p>
+        </div>
+        <div class="card">
+          <h3>जाप व पार्सल सेवा (Jap & Parcel)</h3>
+          <p>ग्रहों का जाप करवाना और जाप का फल भारत में कहीं भी भेजवाना।</p>
+        </div>
+        <div class="card">
+          <h3>शिवाजी अभिषेक (Shivaji Abhishek)</h3>
+          <p>विशेष अभिषेक एवं समर्पित अनुष्ठान।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- slideshow / image area -->
+  <div class="slideshow" aria-hidden="true">
+    <!-- Replace image1.jpg..image3.jpg with your uploaded photos -->
+    <img src="image1.jpg" alt="Slide 1 - Yagna / Office">
+    <img src="image2.jpg" alt="Slide 2 - Maa Amba">
+    <img src="image3.jpg" alt="Slide 3 - Jyotish / Grah">
+  </div>
+
+  <!-- Gallery (thumbnails) -->
+  <section style="padding:0 16px;">
+    <div class="contact">
+      <h3>Contact / संपर्क</h3>
+      <p>हमसे संपर्क करें — कॉल या व्हाट्सएप पर सीधे बात करें:</p>
+      <div class="phones" style="margin-top:8px">
+        <a class="phone-btn" href="tel:+919724469034">📞 9724469034</a>
+        <a class="phone-btn" href="tel:+918200779464">📞 8200779464</a>
+        <a class="whatsapp" href="https://wa.me/919724469034" target="_blank">💬 WhatsApp</a>
+      </div>
+
+      <div style="margin-top:12px">
+        <strong>UPI Payment:</strong>
+        <p style="margin:6px 0">आप UPI से भुगतान कर सकते हैं — (UPI ID यहाँ डालें)</p>
+      </div>
+
+      <div style="margin-top:12px">
+        <strong>Gallery / फोटो</strong>
+        <div class="gallery" id="gallery">
+          <!-- Thumbnails: replace or add files image4.jpg... in repo to show more -->
+          <img src="image1.jpg" alt="photo1">
+          <img src="image2.jpg" alt="photo2">
+          <img src="image3.jpg" alt="photo3">
+        </div>
+        <p style="margin-top:8px;font-size:0.9rem;color:#355a35">
+          (Gallery: बाद में आप GitHub पर image files upload / delete करके यहाँ बदल सकते हैं)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="disclaimer" aria-live="polite">
+    <strong>नोट / Disclaimer:</strong>
+    <p style="margin:8px 0 0">
+      हम शास्त्रों के अनुसार कार्य करते हैं। किसी भी सेवा का परिणाम पूरी तरह गारंटी के योग्य नहीं कहा जा सकता। 
+      आपका यदि श्रद्धा, विश्वास और भक्ति के साथ कर्म करोगे तो फल मिलने की संभावनाएँ बढ़ती हैं — हम यही प्रयास करते हैं कि आपका कार्य जल्द और भली प्रकार पूरा हो। 
+      फिर भी किसी भी परिणाम की गारंटी देना संभव नहीं है।
+    </p>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Chandrabhag Jyotish · All Rights Reserved
+</footer>
+
+<script>
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // simple slideshow (rotates images present in .slideshow)
+  (function(){
+    const container = document.querySelector('.slideshow');
+    if(!container) return;
+    const imgs = Array.from(container.querySelectorAll('img'));
+    let i = 0;
+    imgs.forEach((im, idx)=> { if(idx!==0) im.style.display='none'; });
+    setInterval(()=> {
+      imgs[i].style.opacity = 1;
+      imgs[i].style.display = 'none';
+      i = (i + 1) % imgs.length;
+      imgs[i].style.display = 'block';
+    }, 3500);
+  })();
+</script>
+
+</body>
+</html>
